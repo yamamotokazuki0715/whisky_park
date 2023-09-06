@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-repeat: repeat;
+  background-image: url("../images/bg-repeat.jpg");
+  background-image: url("../images/pattern.jpg");
+  background-size: 200px auto;
+}
+
+.mainvisual {
+  width: 100%;
+  background-image: url("../images/mainvisual-bg.jpg");
+  background-size: contain;
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+  outline: none;
+}
+
+$pc: 1000px; /* pc */
+$tab: 768px; /* タブレット */
+$sp: 500px; /* スマートフォン */
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
